@@ -1,0 +1,38 @@
+{
+  "1DataNode": {
+    "time_total_sec": 37.425,
+    "time_preprocess_sec": 2.11,
+    "time_work_sec": 14.215,
+    "ram_consumption_mb": 0.44
+  },
+  "1DataNode_opt": {
+    "time_total_sec": 33.997,
+    "time_preprocess_sec": 21.899,
+    "time_work_sec": 5.961,
+    "ram_consumption_mb": 17.15
+  },
+  "3DataNode": {
+    "time_total_sec": 40.227,
+    "time_preprocess_sec": 2.668,
+    "time_work_sec": 13.466,
+    "ram_consumption_mb": 0.36
+  },
+  "3DataNode_opt": {
+    "time_total_sec": 35.224,
+    "time_preprocess_sec": 22.925,
+    "time_work_sec": 6.021,
+    "ram_consumption_mb": 17.15
+  },
+  "3DataNode_2Workers": {
+    "time_total_sec": 38.797,
+    "time_preprocess_sec": 2.384,
+    "time_work_sec": 12.364,
+    "ram_consumption_mb": 0.6
+  },
+  "3DataNode_2Workers_opt": {
+    "time_total_sec": 34.89,
+    "time_preprocess_sec": 22.223,
+    "time_work_sec": 5.796,
+    "ram_consumption_mb": 17.25
+  }
+}

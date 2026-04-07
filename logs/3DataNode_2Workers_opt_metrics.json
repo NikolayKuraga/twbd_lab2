@@ -1,0 +1,399 @@
+{
+  "app_name": "online-retail-optimized",
+  "run_label": "3DataNode_2Workers_opt",
+  "master": "spark://spark-master:7077",
+  "input": "hdfs://namenode:9000/data/online-retail/online_retail_II.csv",
+  "dataframe_creation_sec": 5.337,
+  "total_runtime_sec": 34.89,
+  "row_count": 1041671,
+  "actions": [
+    {
+      "label": "materialize cached dataframe",
+      "duration_sec": 22.223,
+      "job_stage_info": {
+        "job_ids": [
+          3,
+          2,
+          1,
+          0
+        ],
+        "jobs": [
+          {
+            "job_id": 3,
+            "stage_ids": [
+              5,
+              6,
+              7
+            ],
+            "stages": [
+              {
+                "stage_id": 5,
+                "name": "count at NativeMethodAccessorImpl.java:0",
+                "num_tasks": 12
+              },
+              {
+                "stage_id": 6,
+                "name": "count at NativeMethodAccessorImpl.java:0",
+                "num_tasks": 12
+              },
+              {
+                "stage_id": 7,
+                "name": "count at NativeMethodAccessorImpl.java:0",
+                "num_tasks": 1
+              }
+            ]
+          },
+          {
+            "job_id": 2,
+            "stage_ids": [
+              3,
+              4
+            ],
+            "stages": [
+              {
+                "stage_id": 3,
+                "name": "count at NativeMethodAccessorImpl.java:0",
+                "num_tasks": 12
+              },
+              {
+                "stage_id": 4,
+                "name": "count at NativeMethodAccessorImpl.java:0",
+                "num_tasks": 12
+              }
+            ]
+          },
+          {
+            "job_id": 1,
+            "stage_ids": [
+              1,
+              2
+            ],
+            "stages": [
+              {
+                "stage_id": 1,
+                "name": "count at NativeMethodAccessorImpl.java:0",
+                "num_tasks": 12
+              },
+              {
+                "stage_id": 2,
+                "name": "count at NativeMethodAccessorImpl.java:0",
+                "num_tasks": 12
+              }
+            ]
+          },
+          {
+            "job_id": 0,
+            "stage_ids": [
+              0
+            ],
+            "stages": [
+              {
+                "stage_id": 0,
+                "name": "count at NativeMethodAccessorImpl.java:0",
+                "num_tasks": 12
+              }
+            ]
+          }
+        ]
+      },
+      "memory_snapshot": {
+        "driver_max_rss_mb": 132.48,
+        "executors": [
+          {
+            "executor": "172.23.0.7:40811",
+            "max_mb": 413.92,
+            "used_mb": 16.33,
+            "remaining_mb": 397.6
+          },
+          {
+            "executor": "172.23.0.8:37001",
+            "max_mb": 413.92,
+            "used_mb": 0.8,
+            "remaining_mb": 413.12
+          },
+          {
+            "executor": "a9d047cc017f:44759",
+            "max_mb": 413.92,
+            "used_mb": 0.05,
+            "remaining_mb": 413.88
+          }
+        ]
+      }
+    },
+    {
+      "label": "top countries by revenue",
+      "duration_sec": 2.952,
+      "job_stage_info": {
+        "job_ids": [
+          4
+        ],
+        "jobs": [
+          {
+            "job_id": 4,
+            "stage_ids": [
+              9,
+              8
+            ],
+            "stages": [
+              {
+                "stage_id": 9,
+                "name": "collect at /workspace/scripts/spark_run_opt.py:229",
+                "num_tasks": 12
+              },
+              {
+                "stage_id": 8,
+                "name": "count at NativeMethodAccessorImpl.java:0",
+                "num_tasks": 12
+              }
+            ]
+          }
+        ]
+      },
+      "memory_snapshot": {
+        "driver_max_rss_mb": 132.48,
+        "executors": [
+          {
+            "executor": "172.23.0.7:40811",
+            "max_mb": 413.92,
+            "used_mb": 16.35,
+            "remaining_mb": 397.58
+          },
+          {
+            "executor": "172.23.0.8:37001",
+            "max_mb": 413.92,
+            "used_mb": 0.81,
+            "remaining_mb": 413.11
+          },
+          {
+            "executor": "a9d047cc017f:44759",
+            "max_mb": 413.92,
+            "used_mb": 0.06,
+            "remaining_mb": 413.87
+          }
+        ]
+      }
+    },
+    {
+      "label": "monthly revenue by source sheet",
+      "duration_sec": 2.844,
+      "job_stage_info": {
+        "job_ids": [
+          6,
+          5
+        ],
+        "jobs": [
+          {
+            "job_id": 6,
+            "stage_ids": [
+              12,
+              13,
+              14
+            ],
+            "stages": [
+              {
+                "stage_id": 12,
+                "name": "count at NativeMethodAccessorImpl.java:0",
+                "num_tasks": 12
+              },
+              {
+                "stage_id": 13,
+                "name": "collect at /workspace/scripts/spark_run_opt.py:246",
+                "num_tasks": 12
+              },
+              {
+                "stage_id": 14,
+                "name": "collect at /workspace/scripts/spark_run_opt.py:246",
+                "num_tasks": 1
+              }
+            ]
+          },
+          {
+            "job_id": 5,
+            "stage_ids": [
+              10,
+              11
+            ],
+            "stages": [
+              {
+                "stage_id": 10,
+                "name": "count at NativeMethodAccessorImpl.java:0",
+                "num_tasks": 12
+              },
+              {
+                "stage_id": 11,
+                "name": "collect at /workspace/scripts/spark_run_opt.py:246",
+                "num_tasks": 12
+              }
+            ]
+          }
+        ]
+      },
+      "memory_snapshot": {
+        "driver_max_rss_mb": 132.48,
+        "executors": [
+          {
+            "executor": "172.23.0.7:40811",
+            "max_mb": 413.92,
+            "used_mb": 16.36,
+            "remaining_mb": 397.56
+          },
+          {
+            "executor": "172.23.0.8:37001",
+            "max_mb": 413.92,
+            "used_mb": 0.81,
+            "remaining_mb": 413.12
+          },
+          {
+            "executor": "a9d047cc017f:44759",
+            "max_mb": 413.92,
+            "used_mb": 0.08,
+            "remaining_mb": 413.85
+          }
+        ]
+      }
+    }
+  ],
+  "samples": {
+    "top_countries_by_revenue": [
+      {
+        "country": "United Kingdom",
+        "orders": 958502,
+        "total_revenue": 17871351.33,
+        "avg_revenue": 18.65
+      },
+      {
+        "country": "EIRE",
+        "orders": 17349,
+        "total_revenue": 664431.78,
+        "avg_revenue": 38.3
+      },
+      {
+        "country": "Netherlands",
+        "orders": 5088,
+        "total_revenue": 554232.34,
+        "avg_revenue": 108.93
+      },
+      {
+        "country": "Germany",
+        "orders": 16694,
+        "total_revenue": 431262.46,
+        "avg_revenue": 25.83
+      },
+      {
+        "country": "France",
+        "orders": 13940,
+        "total_revenue": 356944.6,
+        "avg_revenue": 25.61
+      },
+      {
+        "country": "Australia",
+        "orders": 1812,
+        "total_revenue": 169968.11,
+        "avg_revenue": 93.8
+      },
+      {
+        "country": "Spain",
+        "orders": 3719,
+        "total_revenue": 109178.53,
+        "avg_revenue": 29.36
+      },
+      {
+        "country": "Switzerland",
+        "orders": 3136,
+        "total_revenue": 101011.29,
+        "avg_revenue": 32.21
+      },
+      {
+        "country": "Sweden",
+        "orders": 1338,
+        "total_revenue": 91903.72,
+        "avg_revenue": 68.69
+      },
+      {
+        "country": "Denmark",
+        "orders": 798,
+        "total_revenue": 69862.19,
+        "avg_revenue": 87.55
+      }
+    ],
+    "monthly_revenue_sample": [
+      {
+        "source_sheet": "Year 2009-2010",
+        "invoice_month": "2009-12",
+        "orders": 43957,
+        "monthly_revenue": 825685.76
+      },
+      {
+        "source_sheet": "Year 2009-2010",
+        "invoice_month": "2010-01",
+        "orders": 30638,
+        "monthly_revenue": 652708.5
+      },
+      {
+        "source_sheet": "Year 2009-2010",
+        "invoice_month": "2010-02",
+        "orders": 28282,
+        "monthly_revenue": 553713.3
+      },
+      {
+        "source_sheet": "Year 2009-2010",
+        "invoice_month": "2010-03",
+        "orders": 40364,
+        "monthly_revenue": 833570.13
+      },
+      {
+        "source_sheet": "Year 2009-2010",
+        "invoice_month": "2010-04",
+        "orders": 33268,
+        "monthly_revenue": 681528.99
+      },
+      {
+        "source_sheet": "Year 2009-2010",
+        "invoice_month": "2010-05",
+        "orders": 33795,
+        "monthly_revenue": 659858.86
+      },
+      {
+        "source_sheet": "Year 2009-2010",
+        "invoice_month": "2010-06",
+        "orders": 38900,
+        "monthly_revenue": 752270.14
+      },
+      {
+        "source_sheet": "Year 2009-2010",
+        "invoice_month": "2010-07",
+        "orders": 32503,
+        "monthly_revenue": 650712.94
+      },
+      {
+        "source_sheet": "Year 2009-2010",
+        "invoice_month": "2010-08",
+        "orders": 32473,
+        "monthly_revenue": 697274.91
+      },
+      {
+        "source_sheet": "Year 2009-2010",
+        "invoice_month": "2010-09",
+        "orders": 41109,
+        "monthly_revenue": 924333.01
+      },
+      {
+        "source_sheet": "Year 2009-2010",
+        "invoice_month": "2010-10",
+        "orders": 57797,
+        "monthly_revenue": 1165483.91
+      },
+      {
+        "source_sheet": "Year 2009-2010",
+        "invoice_month": "2010-11",
+        "orders": 76464,
+        "monthly_revenue": 1470272.48
+      }
+    ]
+  },
+  "optimizations": {
+    "explicit_schema": true,
+    "repartition": "repartition(12, 'country')",
+    "persistence": "MEMORY_AND_DISK"
+  }
+}

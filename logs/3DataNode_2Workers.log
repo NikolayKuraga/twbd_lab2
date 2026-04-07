@@ -1,0 +1,46 @@
+2026-04-07 19:40:03,308 | INFO | Spark app started
+2026-04-07 19:40:03,309 | INFO | Input path: hdfs://namenode:9000/data/online-retail/online_retail_II.csv
+2026-04-07 19:40:03,309 | INFO | Master: spark://spark-master:7077
+2026-04-07 19:40:29,799 | INFO | DataFrame created with inferSchema=True in 23.337s
+2026-04-07 19:40:30,321 | INFO | Action started: count input rows
+2026-04-07 19:40:32,736 | INFO | Action finished: count input rows | duration=2.384s
+2026-04-07 19:40:32,737 | INFO | Job IDs: [3, 2]
+2026-04-07 19:40:32,738 | INFO | Job 3 stages=[3, 4]
+2026-04-07 19:40:32,738 | INFO | Stage 3 | count at NativeMethodAccessorImpl.java:0 | tasks=2
+2026-04-07 19:40:32,739 | INFO | Stage 4 | count at NativeMethodAccessorImpl.java:0 | tasks=1
+2026-04-07 19:40:32,739 | INFO | Job 2 stages=[2]
+2026-04-07 19:40:32,739 | INFO | Stage 2 | count at NativeMethodAccessorImpl.java:0 | tasks=2
+2026-04-07 19:40:32,739 | INFO | Executor 172.22.0.7:33089 | used=0.11 MB | remaining=413.82 MB | max=413.92 MB
+2026-04-07 19:40:32,739 | INFO | Executor 172.22.0.8:45531 | used=0.07 MB | remaining=413.86 MB | max=413.92 MB
+2026-04-07 19:40:32,740 | INFO | Executor c05814298be8:37527 | used=0.11 MB | remaining=413.82 MB | max=413.92 MB
+2026-04-07 19:40:32,740 | INFO | Driver max RSS: 131.71 MB
+2026-04-07 19:40:32,740 | INFO | Total rows: 1067371
+2026-04-07 19:40:32,785 | INFO | Action started: top countries by revenue
+2026-04-07 19:40:39,788 | INFO | Action finished: top countries by revenue | duration=6.914s
+2026-04-07 19:40:39,788 | INFO | Job IDs: [5, 4]
+2026-04-07 19:40:39,788 | INFO | Job 5 stages=[6, 7]
+2026-04-07 19:40:39,788 | INFO | Stage 6 | collect at /workspace/scripts/spark_run.py:207 | tasks=2
+2026-04-07 19:40:39,788 | INFO | Stage 7 | collect at /workspace/scripts/spark_run.py:207 | tasks=1
+2026-04-07 19:40:39,789 | INFO | Job 4 stages=[5]
+2026-04-07 19:40:39,789 | INFO | Stage 5 | collect at /workspace/scripts/spark_run.py:207 | tasks=2
+2026-04-07 19:40:39,789 | INFO | Executor 172.22.0.7:33089 | used=0.16 MB | remaining=413.77 MB | max=413.92 MB
+2026-04-07 19:40:39,789 | INFO | Executor 172.22.0.8:45531 | used=0.15 MB | remaining=413.78 MB | max=413.92 MB
+2026-04-07 19:40:39,789 | INFO | Executor c05814298be8:37527 | used=0.18 MB | remaining=413.74 MB | max=413.92 MB
+2026-04-07 19:40:39,789 | INFO | Driver max RSS: 131.71 MB
+2026-04-07 19:40:39,789 | INFO | Top countries by revenue: [{'country': 'United Kingdom', 'orders': 958502, 'total_revenue': 17871351.33, 'avg_revenue': 18.65}, {'country': 'EIRE', 'orders': 17349, 'total_revenue': 664431.78, 'avg_revenue': 38.3}, {'country': 'Netherlands', 'orders': 5088, 'total_revenue': 554232.34, 'avg_revenue': 108.93}, {'country': 'Germany', 'orders': 16694, 'total_revenue': 431262.46, 'avg_revenue': 25.83}, {'country': 'France', 'orders': 13940, 'total_revenue': 356944.6, 'avg_revenue': 25.61}, {'country': 'Australia', 'orders': 1812, 'total_revenue': 169968.11, 'avg_revenue': 93.8}, {'country': 'Spain', 'orders': 3719, 'total_revenue': 109178.53, 'avg_revenue': 29.36}, {'country': 'Switzerland', 'orders': 3136, 'total_revenue': 101011.29, 'avg_revenue': 32.21}, {'country': 'Sweden', 'orders': 1338, 'total_revenue': 91903.72, 'avg_revenue': 68.69}, {'country': 'Denmark', 'orders': 798, 'total_revenue': 69862.19, 'avg_revenue': 87.55}]
+2026-04-07 19:40:39,789 | INFO | Action started: monthly revenue by source sheet
+2026-04-07 19:40:45,256 | INFO | Action finished: monthly revenue by source sheet | duration=5.450s
+2026-04-07 19:40:45,257 | INFO | Job IDs: [7, 6]
+2026-04-07 19:40:45,257 | INFO | Job 7 stages=[9, 10]
+2026-04-07 19:40:45,257 | INFO | Stage 9 | collect at /workspace/scripts/spark_run.py:224 | tasks=2
+2026-04-07 19:40:45,258 | INFO | Stage 10 | collect at /workspace/scripts/spark_run.py:224 | tasks=1
+2026-04-07 19:40:45,258 | INFO | Job 6 stages=[8]
+2026-04-07 19:40:45,258 | INFO | Stage 8 | collect at /workspace/scripts/spark_run.py:224 | tasks=2
+2026-04-07 19:40:45,258 | INFO | Executor 172.22.0.7:33089 | used=0.22 MB | remaining=413.71 MB | max=413.92 MB
+2026-04-07 19:40:45,258 | INFO | Executor 172.22.0.8:45531 | used=0.16 MB | remaining=413.77 MB | max=413.92 MB
+2026-04-07 19:40:45,258 | INFO | Executor c05814298be8:37527 | used=0.22 MB | remaining=413.71 MB | max=413.92 MB
+2026-04-07 19:40:45,259 | INFO | Driver max RSS: 131.71 MB
+2026-04-07 19:40:45,259 | INFO | Monthly revenue sample: [{'source_sheet': 'Year 2009-2010', 'invoice_month': '2009-12', 'orders': 43957, 'monthly_revenue': 825685.76}, {'source_sheet': 'Year 2009-2010', 'invoice_month': '2010-01', 'orders': 30638, 'monthly_revenue': 652708.5}, {'source_sheet': 'Year 2009-2010', 'invoice_month': '2010-02', 'orders': 28282, 'monthly_revenue': 553713.3}, {'source_sheet': 'Year 2009-2010', 'invoice_month': '2010-03', 'orders': 40364, 'monthly_revenue': 833570.13}, {'source_sheet': 'Year 2009-2010', 'invoice_month': '2010-04', 'orders': 33268, 'monthly_revenue': 681528.99}, {'source_sheet': 'Year 2009-2010', 'invoice_month': '2010-05', 'orders': 33795, 'monthly_revenue': 659858.86}, {'source_sheet': 'Year 2009-2010', 'invoice_month': '2010-06', 'orders': 38900, 'monthly_revenue': 752270.14}, {'source_sheet': 'Year 2009-2010', 'invoice_month': '2010-07', 'orders': 32503, 'monthly_revenue': 650712.94}, {'source_sheet': 'Year 2009-2010', 'invoice_month': '2010-08', 'orders': 32473, 'monthly_revenue': 697274.91}, {'source_sheet': 'Year 2009-2010', 'invoice_month': '2010-09', 'orders': 41109, 'monthly_revenue': 924333.01}, {'source_sheet': 'Year 2009-2010', 'invoice_month': '2010-10', 'orders': 57797, 'monthly_revenue': 1165483.91}, {'source_sheet': 'Year 2009-2010', 'invoice_month': '2010-11', 'orders': 76464, 'monthly_revenue': 1470272.48}]
+2026-04-07 19:40:45,260 | INFO | Metrics written to /workspace/logs/3DataNode_2Workers_metrics.json
+2026-04-07 19:40:45,260 | INFO | Log written to /workspace/logs/3DataNode_2Workers.log
+2026-04-07 19:40:45,261 | INFO | Spark app finished successfully
